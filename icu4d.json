@@ -1,0 +1,1129 @@
+[
+ {
+  "name" : "icu4d",
+  "kind" : "module",
+  "file" : "/home/runner/work/icu4d/icu4d/src/icu4d/package.d",
+  "members" : [
+   {
+    "name" : "icu4d.scheme",
+    "kind" : "import",
+    "comment" : "\n",
+    "line" : 4,
+    "char" : 15
+   },
+   {
+    "name" : "icu4d.helper",
+    "kind" : "import",
+    "comment" : "\n",
+    "line" : 6,
+    "char" : 15
+   }
+  ]
+ },
+ {
+  "name" : "icu4d.helper",
+  "kind" : "module",
+  "file" : "/home/runner/work/icu4d/icu4d/src/icu4d/helper.d",
+  "comment" : " Helper of encode/decode\n",
+  "members" : [
+   {
+    "name" : "__unittest_L7_C9",
+    "kind" : "function",
+    "comment" : "\n",
+    "line" : 7,
+    "char" : 9,
+    "storageClass" : [
+     "@system"
+    ],
+    "endline" : 20,
+    "endchar" : 1
+   },
+   {
+    "name" : "std.encoding",
+    "kind" : "import",
+    "line" : 20,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.traits",
+    "kind" : "import",
+    "line" : 21,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.range",
+    "kind" : "import",
+    "line" : 22,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "bindbc.icu",
+    "kind" : "import",
+    "line" : 24,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "icu4d.scheme",
+    "kind" : "import",
+    "line" : 25,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "kind" : "template",
+    "comment" : "\n",
+    "line" : 29,
+    "char" : 6,
+    "name" : "decodeText",
+    "parameters" : [
+     {
+      "name" : "Range",
+      "kind" : "type"
+     }
+    ],
+    "constraint" : "!isSomeString!Range && isOutputRange!(Range, dchar)",
+    "members" : [
+     {
+      "name" : "decodeText",
+      "kind" : "function",
+      "line" : 29,
+      "char" : 6,
+      "type" : "void(const(ubyte)[] src, auto ref Range dst, string charsetName = null)",
+      "parameters" : [
+       {
+        "name" : "src",
+        "type" : "const(ubyte)[]"
+       },
+       {
+        "name" : "dst",
+        "type" : "Range",
+        "storageClass" : [
+         "auto",
+         "ref"
+        ]
+       },
+       {
+        "name" : "charsetName",
+        "type" : "string",
+        "default" : "null"
+       }
+      ],
+      "endline" : 44,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "kind" : "template",
+    "comment" : "ditto\n",
+    "line" : 46,
+    "char" : 6,
+    "name" : "decodeText",
+    "parameters" : [
+     {
+      "name" : "Str",
+      "kind" : "type"
+     }
+    ],
+    "constraint" : "isSomeString!Str",
+    "members" : [
+     {
+      "name" : "decodeText",
+      "kind" : "function",
+      "line" : 46,
+      "char" : 6,
+      "type" : "void(in ubyte[] src, ref Str dst, string charsetName = null)",
+      "parameters" : [
+       {
+        "name" : "src",
+        "type" : "ubyte[]",
+        "storageClass" : [
+         "in"
+        ]
+       },
+       {
+        "name" : "dst",
+        "type" : "Str",
+        "storageClass" : [
+         "ref"
+        ]
+       },
+       {
+        "name" : "charsetName",
+        "type" : "string",
+        "default" : "null"
+       }
+      ],
+      "endline" : 53,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "name" : "decodeText",
+    "kind" : "function",
+    "comment" : "ditto\n",
+    "line" : 55,
+    "char" : 8,
+    "deco" : "FIAhAyaZQe",
+    "parameters" : [
+     {
+      "name" : "src",
+      "deco" : "xAh",
+      "storageClass" : [
+       "in"
+      ]
+     },
+     {
+      "name" : "charsetName",
+      "deco" : "Aya",
+      "default" : "null"
+     }
+    ],
+    "endline" : 60,
+    "endchar" : 1
+   },
+   {
+    "kind" : "template",
+    "comment" : "ditto\n",
+    "line" : 62,
+    "char" : 6,
+    "name" : "decodeText",
+    "parameters" : [
+     {
+      "name" : "charsetName",
+      "kind" : "value",
+      "deco" : "Aya"
+     },
+     {
+      "name" : "Args",
+      "kind" : "tuple"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "decodeText",
+      "kind" : "function",
+      "line" : 62,
+      "char" : 6,
+      "storageClass" : [
+       "auto"
+      ],
+      "type" : "(auto ref Args args)",
+      "parameters" : [
+       {
+        "name" : "args",
+        "type" : "Args",
+        "storageClass" : [
+         "auto",
+         "ref"
+        ]
+       }
+      ],
+      "endline" : 65,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "name" : "fromMBS",
+    "kind" : "alias",
+    "comment" : "\n",
+    "line" : 68,
+    "char" : 1,
+    "originalType" : "decodeText"
+   },
+   {
+    "kind" : "template",
+    "comment" : "\n",
+    "line" : 71,
+    "char" : 6,
+    "name" : "encodeText",
+    "parameters" : [
+     {
+      "name" : "Src",
+      "kind" : "type"
+     },
+     {
+      "name" : "Range",
+      "kind" : "type"
+     }
+    ],
+    "constraint" : "isSomeString!Src && isOutputRange!(Range, ubyte)",
+    "members" : [
+     {
+      "name" : "encodeText",
+      "kind" : "function",
+      "line" : 71,
+      "char" : 6,
+      "type" : "void(Src src, auto ref Range dst, string charsetName = null)",
+      "parameters" : [
+       {
+        "name" : "src",
+        "type" : "Src"
+       },
+       {
+        "name" : "dst",
+        "type" : "Range",
+        "storageClass" : [
+         "auto",
+         "ref"
+        ]
+       },
+       {
+        "name" : "charsetName",
+        "type" : "string",
+        "default" : "null"
+       }
+      ],
+      "endline" : 86,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "kind" : "template",
+    "comment" : "ditto\n",
+    "line" : 88,
+    "char" : 6,
+    "name" : "encodeText",
+    "parameters" : [
+     {
+      "name" : "Str",
+      "kind" : "type"
+     }
+    ],
+    "constraint" : "isSomeString!Str",
+    "members" : [
+     {
+      "name" : "encodeText",
+      "kind" : "function",
+      "line" : 88,
+      "char" : 6,
+      "type" : "void(Str src, ref immutable(ubyte)[] dst, string charsetName = null)",
+      "parameters" : [
+       {
+        "name" : "src",
+        "type" : "Str"
+       },
+       {
+        "name" : "dst",
+        "type" : "immutable(ubyte)[]",
+        "storageClass" : [
+         "ref"
+        ]
+       },
+       {
+        "name" : "charsetName",
+        "type" : "string",
+        "default" : "null"
+       }
+      ],
+      "endline" : 94,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "kind" : "template",
+    "comment" : "ditto\n",
+    "line" : 96,
+    "char" : 20,
+    "name" : "encodeText",
+    "parameters" : [
+     {
+      "name" : "Str",
+      "kind" : "type"
+     }
+    ],
+    "constraint" : "isSomeString!Str",
+    "members" : [
+     {
+      "name" : "encodeText",
+      "kind" : "function",
+      "line" : 96,
+      "char" : 20,
+      "type" : "immutable(ubyte)[](Str src, string charsetName = null)",
+      "parameters" : [
+       {
+        "name" : "src",
+        "type" : "Str"
+       },
+       {
+        "name" : "charsetName",
+        "type" : "string",
+        "default" : "null"
+       }
+      ],
+      "endline" : 102,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "kind" : "template",
+    "comment" : "ditto\n",
+    "line" : 104,
+    "char" : 6,
+    "name" : "encodeText",
+    "parameters" : [
+     {
+      "name" : "charsetName",
+      "kind" : "value",
+      "deco" : "Aya"
+     },
+     {
+      "name" : "Args",
+      "kind" : "tuple"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "encodeText",
+      "kind" : "function",
+      "line" : 104,
+      "char" : 6,
+      "storageClass" : [
+       "auto"
+      ],
+      "type" : "(auto ref Args args)",
+      "parameters" : [
+       {
+        "name" : "args",
+        "type" : "Args",
+        "storageClass" : [
+         "auto",
+         "ref"
+        ]
+       }
+      ],
+      "endline" : 107,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "name" : "toMBS",
+    "kind" : "alias",
+    "comment" : "\n",
+    "line" : 110,
+    "char" : 1,
+    "originalType" : "encodeText"
+   }
+  ]
+ },
+ {
+  "name" : "icu4d.misc",
+  "kind" : "module",
+  "file" : "/home/runner/work/icu4d/icu4d/src/icu4d/misc.d",
+  "members" : [
+   {
+    "name" : "std.encoding",
+    "kind" : "import",
+    "line" : 6,
+    "char" : 8,
+    "protection" : "package"
+   },
+   {
+    "name" : "bindbc.icu",
+    "kind" : "import",
+    "line" : 7,
+    "char" : 8,
+    "protection" : "package"
+   },
+   {
+    "name" : "toStringFromAscii",
+    "kind" : "function",
+    "protection" : "package",
+    "comment" : "\n",
+    "line" : 11,
+    "char" : 8,
+    "deco" : "FIPaZAya",
+    "parameters" : [
+     {
+      "name" : "s",
+      "deco" : "xPa",
+      "storageClass" : [
+       "in"
+      ]
+     }
+    ],
+    "endline" : 17,
+    "endchar" : 1
+   },
+   {
+    "name" : "toAsciiCstr",
+    "kind" : "function",
+    "protection" : "package",
+    "comment" : "\n",
+    "line" : 20,
+    "char" : 14,
+    "deco" : "FIAaZPxa",
+    "parameters" : [
+     {
+      "name" : "s",
+      "deco" : "xAa",
+      "storageClass" : [
+       "in"
+      ]
+     }
+    ],
+    "endline" : 23,
+    "endchar" : 1
+   },
+   {
+    "name" : "Icu4dEncodingException",
+    "kind" : "class",
+    "protection" : "package",
+    "comment" : "\n",
+    "line" : 26,
+    "char" : 1,
+    "base" : "std.encoding.EncodingException",
+    "members" : [
+     {
+      "name" : "errorCode",
+      "kind" : "variable",
+      "line" : 28,
+      "char" : 13,
+      "deco" : "E6bindbc3icu8bindings6utypes10UErrorCode",
+      "offset" : 76
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 29,
+      "char" : 2,
+      "deco" : "FE6bindbc3icu8bindings6utypes10UErrorCodeZC5icu4d4misc22Icu4dEncodingException",
+      "originalType" : "(UErrorCode err)",
+      "parameters" : [
+       {
+        "name" : "err",
+        "deco" : "E6bindbc3icu8bindings6utypes10UErrorCode"
+       }
+      ],
+      "endline" : 34,
+      "endchar" : 2
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 35,
+      "char" : 2,
+      "deco" : "FE6bindbc3icu8bindings6utypes10UErrorCodeAyaZC5icu4d4misc22Icu4dEncodingException",
+      "originalType" : "(UErrorCode err, string msg)",
+      "parameters" : [
+       {
+        "name" : "err",
+        "deco" : "E6bindbc3icu8bindings6utypes10UErrorCode"
+       },
+       {
+        "name" : "msg",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 39,
+      "endchar" : 2
+     }
+    ]
+   },
+   {
+    "name" : "icuEnforce",
+    "kind" : "function",
+    "protection" : "package",
+    "comment" : "\n",
+    "line" : 43,
+    "char" : 12,
+    "deco" : "FE6bindbc3icu8bindings6utypes10UErrorCodeZQBp",
+    "parameters" : [
+     {
+      "name" : "err",
+      "deco" : "E6bindbc3icu8bindings6utypes10UErrorCode"
+     }
+    ],
+    "endline" : 48,
+    "endchar" : 1
+   },
+   {
+    "name" : "icuEnforce",
+    "kind" : "function",
+    "protection" : "package",
+    "comment" : "\n",
+    "line" : 51,
+    "char" : 12,
+    "deco" : "FE6bindbc3icu8bindings6utypes10UErrorCodeAyaZQBs",
+    "parameters" : [
+     {
+      "name" : "err",
+      "deco" : "E6bindbc3icu8bindings6utypes10UErrorCode"
+     },
+     {
+      "name" : "msg",
+      "deco" : "Aya"
+     }
+    ],
+    "endline" : 56,
+    "endchar" : 1
+   }
+  ]
+ },
+ {
+  "name" : "icu4d.scheme",
+  "kind" : "module",
+  "file" : "/home/runner/work/icu4d/icu4d/src/icu4d/scheme.d",
+  "members" : [
+   {
+    "name" : "std.encoding",
+    "kind" : "import",
+    "line" : 3,
+    "char" : 15
+   },
+   {
+    "name" : "std.range",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.traits",
+    "kind" : "import",
+    "line" : 5,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "bindbc.icu",
+    "kind" : "import",
+    "line" : 7,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "icu4d.misc",
+    "kind" : "import",
+    "line" : 9,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "ICUEncodingScheme",
+    "kind" : "class",
+    "comment" : "\n",
+    "line" : 18,
+    "char" : 10,
+    "base" : "std.encoding.EncodingScheme",
+    "members" : [
+     {
+      "name" : "_charsetName",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 21,
+      "char" : 9,
+      "deco" : "Aya",
+      "offset" : 16
+     },
+     {
+      "name" : "_charsetNameCstr",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 22,
+      "char" : 15,
+      "deco" : "Pxa",
+      "offset" : 32
+     },
+     {
+      "name" : "_converter",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 23,
+      "char" : 14,
+      "deco" : "PS6bindbc3icu8bindings8ucnv_err10UConverter",
+      "offset" : 40
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "comment" : "\n",
+      "line" : 26,
+      "char" : 2,
+      "deco" : "FAyaZC5icu4d6scheme17ICUEncodingScheme",
+      "originalType" : "(string charsetName)",
+      "parameters" : [
+       {
+        "name" : "charsetName",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 41,
+      "endchar" : 2
+     },
+     {
+      "name" : "~this",
+      "kind" : "destructor",
+      "comment" : "\n",
+      "line" : 44,
+      "char" : 2,
+      "deco" : "FZv",
+      "endline" : 52,
+      "endchar" : 2
+     },
+     {
+      "name" : "toString",
+      "kind" : "function",
+      "comment" : "\n",
+      "line" : 55,
+      "char" : 18,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "xFZAya",
+      "endline" : 58,
+      "endchar" : 2,
+      "overrides" : [
+       "std.encoding.EncodingScheme.toString"
+      ]
+     },
+     {
+      "name" : "names",
+      "kind" : "function",
+      "comment" : "\n",
+      "line" : 61,
+      "char" : 20,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "xFZAAya",
+      "endline" : 75,
+      "endchar" : 2,
+      "overrides" : [
+       "std.encoding.EncodingScheme.names"
+      ]
+     },
+     {
+      "name" : "canEncode",
+      "kind" : "function",
+      "comment" : "\n",
+      "line" : 78,
+      "char" : 16,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "xFwZb",
+      "parameters" : [
+       {
+        "name" : "c",
+        "deco" : "w"
+       }
+      ],
+      "endline" : 93,
+      "endchar" : 2,
+      "overrides" : [
+       "std.encoding.EncodingScheme.canEncode"
+      ]
+     },
+     {
+      "name" : "encodedLength",
+      "kind" : "function",
+      "comment" : "\n",
+      "line" : 96,
+      "char" : 18,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "xFwZm",
+      "originalType" : "const size_t(dchar c)",
+      "parameters" : [
+       {
+        "name" : "c",
+        "deco" : "w"
+       }
+      ],
+      "endline" : 100,
+      "endchar" : 2,
+      "overrides" : [
+       "std.encoding.EncodingScheme.encodedLength"
+      ]
+     },
+     {
+      "name" : "encode",
+      "kind" : "function",
+      "comment" : "\n",
+      "line" : 103,
+      "char" : 18,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "xFwAhZm",
+      "originalType" : "const size_t(dchar c, ubyte[] buffer)",
+      "parameters" : [
+       {
+        "name" : "c",
+        "deco" : "w"
+       },
+       {
+        "name" : "buffer",
+        "deco" : "Ah"
+       }
+      ],
+      "endline" : 118,
+      "endchar" : 2,
+      "overrides" : [
+       "std.encoding.EncodingScheme.encode"
+      ]
+     },
+     {
+      "name" : "decode",
+      "kind" : "function",
+      "comment" : "\n",
+      "line" : 121,
+      "char" : 17,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "xFKAxhZw",
+      "parameters" : [
+       {
+        "name" : "s",
+        "deco" : "Axh",
+        "storageClass" : [
+         "ref"
+        ]
+       }
+      ],
+      "endline" : 137,
+      "endchar" : 2,
+      "overrides" : [
+       "std.encoding.EncodingScheme.decode"
+      ]
+     },
+     {
+      "name" : "safeDecode",
+      "kind" : "function",
+      "comment" : "\n",
+      "line" : 140,
+      "char" : 17,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "xFKAxhZw",
+      "parameters" : [
+       {
+        "name" : "s",
+        "deco" : "Axh",
+        "storageClass" : [
+         "ref"
+        ]
+       }
+      ],
+      "endline" : 157,
+      "endchar" : 2,
+      "overrides" : [
+       "std.encoding.EncodingScheme.safeDecode"
+      ]
+     },
+     {
+      "name" : "replacementSequence",
+      "kind" : "function",
+      "comment" : "\n",
+      "line" : 160,
+      "char" : 30,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "xFNdZAyh",
+      "endline" : 163,
+      "endchar" : 2,
+      "overrides" : [
+       "std.encoding.EncodingScheme.replacementSequence"
+      ]
+     },
+     {
+      "kind" : "template",
+      "comment" : "\n",
+      "line" : 167,
+      "char" : 7,
+      "name" : "decodeSequence",
+      "parameters" : [
+       {
+        "name" : "Range",
+        "kind" : "type"
+       }
+      ],
+      "constraint" : "!isSomeString!Range && isOutputRange!(Range, dchar)",
+      "members" : [
+       {
+        "name" : "decodeSequence",
+        "kind" : "function",
+        "line" : 167,
+        "char" : 7,
+        "type" : "void(in ubyte[] src, Range dst)",
+        "parameters" : [
+         {
+          "name" : "src",
+          "type" : "ubyte[]",
+          "storageClass" : [
+           "in"
+          ]
+         },
+         {
+          "name" : "dst",
+          "type" : "Range"
+         }
+        ],
+        "endline" : 209,
+        "endchar" : 2
+       }
+      ]
+     },
+     {
+      "kind" : "template",
+      "comment" : "ditto\n",
+      "line" : 211,
+      "char" : 7,
+      "name" : "decodeSequence",
+      "parameters" : [
+       {
+        "name" : "Str",
+        "kind" : "type"
+       }
+      ],
+      "constraint" : "isSomeString!Str",
+      "members" : [
+       {
+        "name" : "decodeSequence",
+        "kind" : "function",
+        "line" : 211,
+        "char" : 7,
+        "type" : "void(in ubyte[] src, ref Str dst)",
+        "parameters" : [
+         {
+          "name" : "src",
+          "type" : "ubyte[]",
+          "storageClass" : [
+           "in"
+          ]
+         },
+         {
+          "name" : "dst",
+          "type" : "Str",
+          "storageClass" : [
+           "ref"
+          ]
+         }
+        ],
+        "endline" : 217,
+        "endchar" : 2
+       }
+      ]
+     },
+     {
+      "name" : "decodeSequence",
+      "kind" : "function",
+      "comment" : "ditto\n",
+      "line" : 219,
+      "char" : 9,
+      "deco" : "FIAhZAya",
+      "parameters" : [
+       {
+        "name" : "src",
+        "deco" : "xAh",
+        "storageClass" : [
+         "in"
+        ]
+       }
+      ],
+      "endline" : 224,
+      "endchar" : 2
+     },
+     {
+      "kind" : "template",
+      "comment" : "\n",
+      "line" : 228,
+      "char" : 7,
+      "name" : "encodeSequence",
+      "parameters" : [
+       {
+        "name" : "Src",
+        "kind" : "type"
+       },
+       {
+        "name" : "Range",
+        "kind" : "type"
+       }
+      ],
+      "constraint" : "isSomeString!Src && isOutputRange!(Range, ubyte)",
+      "members" : [
+       {
+        "name" : "encodeSequence",
+        "kind" : "function",
+        "line" : 228,
+        "char" : 7,
+        "type" : "void(Src src, Range dst)",
+        "parameters" : [
+         {
+          "name" : "src",
+          "type" : "Src"
+         },
+         {
+          "name" : "dst",
+          "type" : "Range"
+         }
+        ],
+        "endline" : 258,
+        "endchar" : 2
+       }
+      ]
+     },
+     {
+      "kind" : "template",
+      "comment" : "ditto\n",
+      "line" : 260,
+      "char" : 7,
+      "name" : "encodeSequence",
+      "parameters" : [
+       {
+        "name" : "Str",
+        "kind" : "type"
+       }
+      ],
+      "constraint" : "isSomeString!Str",
+      "members" : [
+       {
+        "name" : "encodeSequence",
+        "kind" : "function",
+        "line" : 260,
+        "char" : 7,
+        "type" : "void(Str src, ref immutable(ubyte)[] dst)",
+        "parameters" : [
+         {
+          "name" : "src",
+          "type" : "Str"
+         },
+         {
+          "name" : "dst",
+          "type" : "immutable(ubyte)[]",
+          "storageClass" : [
+           "ref"
+          ]
+         }
+        ],
+        "endline" : 266,
+        "endchar" : 2
+       }
+      ]
+     },
+     {
+      "kind" : "template",
+      "comment" : "ditto\n",
+      "line" : 268,
+      "char" : 21,
+      "name" : "encodeSequence",
+      "parameters" : [
+       {
+        "name" : "Str",
+        "kind" : "type"
+       }
+      ],
+      "constraint" : "isSomeString!Str",
+      "members" : [
+       {
+        "name" : "encodeSequence",
+        "kind" : "function",
+        "line" : 268,
+        "char" : 21,
+        "type" : "immutable(ubyte)[](Str src)",
+        "parameters" : [
+         {
+          "name" : "src",
+          "type" : "Str"
+         }
+        ],
+        "endline" : 274,
+        "endchar" : 2
+       }
+      ]
+     },
+     {
+      "name" : "__xdtor",
+      "kind" : "alias"
+     }
+    ]
+   },
+   {
+    "kind" : "template",
+    "comment" : "\n",
+    "line" : 279,
+    "char" : 7,
+    "name" : "ICUEncodingSchemeImpl",
+    "parameters" : [
+     {
+      "name" : "charsetName",
+      "kind" : "value",
+      "deco" : "Aya"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "ICUEncodingSchemeImpl",
+      "kind" : "class",
+      "line" : 279,
+      "char" : 7,
+      "members" : [
+       {
+        "name" : "_sharedStaticCtor_L281_C2",
+        "kind" : "function",
+        "line" : 281,
+        "char" : 2,
+        "storageClass" : [
+         "static"
+        ],
+        "endline" : 284,
+        "endchar" : 2
+       },
+       {
+        "name" : "this",
+        "kind" : "constructor",
+        "comment" : "\n",
+        "line" : 286,
+        "char" : 2,
+        "type" : "()",
+        "endline" : 289,
+        "endchar" : 2
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "kind" : "template",
+    "comment" : "\n",
+    "line" : 293,
+    "char" : 7,
+    "name" : "registerICUScheme",
+    "parameters" : [
+     {
+      "name" : "charsetName",
+      "kind" : "alias"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "_sharedStaticCtor_L295_C2",
+      "kind" : "function",
+      "line" : 295,
+      "char" : 2,
+      "storageClass" : [
+       "static"
+      ],
+      "endline" : 298,
+      "endchar" : 2
+     }
+    ]
+   }
+  ]
+ }
+]

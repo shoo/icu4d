@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html>    <head>        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" type="text/css" href="css/proj_docs.css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript" src="js/sidebar.js"></script>
+        <script type="text/javascript" src="js/listanchors.js"></script>
+        <title>icu4d.scheme</title>
+        
+        
+    </head>
+    <body>        
+        <div class="container">            
+<div class="sidebar-underbar"></div>
+<div class="sidebar">    <div class="head">        <h2>icu4d</h2>
+        <p><span class="smallprint"><b>version:</b> ~master <span class="separator"><br></span>
+            </span>
+        </p>
+        <p><a href="index.html">overview</a></p>
+    </div>
+    
+    <ul>
+
+	
+	
+		<li class="expand-container open"><a title='
+		' class='expand-toggle' href='#'><span >icu4d</span></a><ul><li><a title='
+		' href="
+			icu4d--icu4d.html"><span >package</span></a></li>
+			
+
+	<li><a title="Helper of encode/decode" href="icu4d--icu4d.helper.html"><span >helper</span></a></li>
+
+
+
+	<li><a title="" href="icu4d--icu4d.misc.html"><span >misc</span></a></li>
+
+
+
+	<li><a title="" href="icu4d--icu4d.scheme.html"><span >scheme</span></a></li>
+
+</ul></li>
+	
+	
+
+
+
+
+</ul>
+</div>
+            <div class="content">                <h1>icu4d.scheme</h1>
+                
+                <div class="quickindex" id="quickindex"></div>
+                
+                
+<dl class="ddoc_members"><div class="ddoc_module_members"><dt class="ddoc_decl"><div ><span class="def-anchor" id=".ICUEncodingScheme"></span><div class="quickindex" id="quickindex.ICUEncodingScheme"></div>abstract class <code class="ddoc_psymbol">ICUEncodingScheme</code>: <span class="ddoc_psuper_symbol">std.encoding.EncodingScheme</span>;
+<br></div></dt>
+<dd>
+<dl class="ddoc_members"><div class="ddoc_class_members"><dt class="ddoc_decl"><div ><span class="def-anchor" id=".ICUEncodingScheme.this"></span><div class="quickindex" id="quickindex.ICUEncodingScheme.this"></div>this(string <span class="ddoc_param">charsetName</span>);
+<br></div></dt>
+<dd>
+</dd>
+<dt class="ddoc_decl"><div ><span class="def-anchor" id=".ICUEncodingScheme.toString"></span><div class="quickindex" id="quickindex.ICUEncodingScheme.toString"></div>const string <code class="ddoc_psymbol">toString</code>();
+<br></div></dt>
+<dd>
+</dd>
+<dt class="ddoc_decl"><div ><span class="def-anchor" id=".ICUEncodingScheme.names"></span><div class="quickindex" id="quickindex.ICUEncodingScheme.names"></div>const string[] <code class="ddoc_psymbol">names</code>();
+<br></div></dt>
+<dd>
+</dd>
+<dt class="ddoc_decl"><div ><span class="def-anchor" id=".ICUEncodingScheme.canEncode"></span><div class="quickindex" id="quickindex.ICUEncodingScheme.canEncode"></div>const bool <code class="ddoc_psymbol">canEncode</code>(dchar <span class="ddoc_param">c</span>);
+<br></div></dt>
+<dd>
+</dd>
+<dt class="ddoc_decl"><div ><span class="def-anchor" id=".ICUEncodingScheme.encodedLength"></span><div class="quickindex" id="quickindex.ICUEncodingScheme.encodedLength"></div>const size_t <code class="ddoc_psymbol">encodedLength</code>(dchar <span class="ddoc_param">c</span>);
+<br></div></dt>
+<dd>
+</dd>
+<dt class="ddoc_decl"><div ><span class="def-anchor" id=".ICUEncodingScheme.encode"></span><div class="quickindex" id="quickindex.ICUEncodingScheme.encode"></div>const size_t <code class="ddoc_psymbol">encode</code>(dchar <span class="ddoc_param">c</span>, ubyte[] <span class="ddoc_param">buffer</span>);
+<br></div></dt>
+<dd>
+</dd>
+<dt class="ddoc_decl"><div ><span class="def-anchor" id=".ICUEncodingScheme.decode"></span><div class="quickindex" id="quickindex.ICUEncodingScheme.decode"></div>const dchar <code class="ddoc_psymbol">decode</code>(ref const(ubyte)[] <span class="ddoc_param">s</span>);
+<br></div></dt>
+<dd>
+</dd>
+<dt class="ddoc_decl"><div ><span class="def-anchor" id=".ICUEncodingScheme.safeDecode"></span><div class="quickindex" id="quickindex.ICUEncodingScheme.safeDecode"></div>const dchar <code class="ddoc_psymbol">safeDecode</code>(ref const(ubyte)[] <span class="ddoc_param">s</span>);
+<br></div></dt>
+<dd>
+</dd>
+<dt class="ddoc_decl"><div ><span class="def-anchor" id=".ICUEncodingScheme.replacementSequence"></span><div class="quickindex" id="quickindex.ICUEncodingScheme.replacementSequence"></div>const @property immutable(ubyte)[] <code class="ddoc_psymbol">replacementSequence</code>();
+<br></div></dt>
+<dd>
+</dd>
+<dt class="ddoc_decl"><div ><span class="def-anchor" id=".ICUEncodingScheme.decodeSequence"></span><div class="quickindex" id="quickindex.ICUEncodingScheme.decodeSequence"></div>void <code class="ddoc_psymbol">decodeSequence</code><span class="ddoc_template_param_list" title="Template parameter list">(Range)</span>(in ubyte[] <span class="ddoc_param">src</span>, Range <span class="ddoc_param">dst</span>)<br><span class="ddoc_constraint">if(!isSomeString!Range &amp;&amp; isOutputRange!(Range, dchar))</span>;
+<br>
+void <code class="ddoc_psymbol">decodeSequence</code><span class="ddoc_template_param_list" title="Template parameter list">(Str)</span>(in ubyte[] <span class="ddoc_param">src</span>, ref Str <span class="ddoc_param">dst</span>)<br><span class="ddoc_constraint">if(isSomeString!Str)</span>;
+<br>
+string <code class="ddoc_psymbol">decodeSequence</code>(in ubyte[] <span class="ddoc_param">src</span>);
+<br></div></dt>
+<dd>
+</dd>
+<dt class="ddoc_decl"><div ><span class="def-anchor" id=".ICUEncodingScheme.encodeSequence"></span><div class="quickindex" id="quickindex.ICUEncodingScheme.encodeSequence"></div>void <code class="ddoc_psymbol">encodeSequence</code><span class="ddoc_template_param_list" title="Template parameter list">(Src, Range)</span>(Src <span class="ddoc_param">src</span>, Range <span class="ddoc_param">dst</span>)<br><span class="ddoc_constraint">if(isSomeString!Src &amp;&amp; isOutputRange!(Range, ubyte))</span>;
+<br>
+void <code class="ddoc_psymbol">encodeSequence</code><span class="ddoc_template_param_list" title="Template parameter list">(Str)</span>(Str <span class="ddoc_param">src</span>, ref immutable(ubyte)[] <span class="ddoc_param">dst</span>)<br><span class="ddoc_constraint">if(isSomeString!Str)</span>;
+<br>
+immutable(ubyte)[] <code class="ddoc_psymbol">encodeSequence</code><span class="ddoc_template_param_list" title="Template parameter list">(Str)</span>(Str <span class="ddoc_param">src</span>)<br><span class="ddoc_constraint">if(isSomeString!Str)</span>;
+<br></div></dt>
+<dd>
+</dd>
+</div></dl>
+</dd>
+<dt class="ddoc_decl"><div ><span class="def-anchor" id=".ICUEncodingSchemeImpl"></span><div class="quickindex" id="quickindex.ICUEncodingSchemeImpl"></div>class <code class="ddoc_psymbol">ICUEncodingSchemeImpl</code>(string charsetName): ICUEncodingScheme;
+<br></div></dt>
+<dd>
+<dl class="ddoc_members"><div class="ddoc_class_members"><dt class="ddoc_decl"><div ><span class="def-anchor" id=".ICUEncodingSchemeImpl.this"></span><div class="quickindex" id="quickindex.ICUEncodingSchemeImpl.this"></div>this();
+<br></div></dt>
+<dd>
+</dd>
+</div></dl>
+</dd>
+<dt class="ddoc_decl"><div ><span class="def-anchor" id=".registerICUScheme"></span><div class="quickindex" id="quickindex.registerICUScheme"></div>template <code class="ddoc_psymbol">registerICUScheme</code>(alias charsetName)<br></div></dt>
+<dd>
+</dd>
+</div></dl>
+
+                
+            </div>
+        </div>
+        
+        <script type="text/javascript">jQuery(document).ready(listanchors);</script>
+        
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+     </body>
+</html>
