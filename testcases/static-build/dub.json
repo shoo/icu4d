@@ -1,0 +1,5 @@
+{
+	"name": "static-build",
+	"dependencies": {"icu4d": {"path": "../..", "version": "*"}},
+	"subConfigurations": {"icu4d": "static"}
+}

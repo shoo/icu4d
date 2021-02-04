@@ -1,0 +1,55 @@
+{
+	"authors": ["SHOO"],
+	"copyright": "Copyright © 2021, SHOO",
+	"description": "Encoding schemes based on IBM ICU",
+	"license": "BSL-1.0",
+	"name": "icu4d",
+	"dependencies": {
+		"bindbc-icu": "~>67.1.0"
+	},
+	
+	"configurations": [
+		{
+			"name": "static",
+			"targetType": "library",
+			"subConfigurations": {
+				"bindbc-icu": "static"
+			}
+		},
+		{
+			"name": "static-nolib",
+			"targetType": "library",
+			"subConfigurations": {
+				"bindbc-icu": "static-nolib"
+			}
+		},
+		{
+			"name": "dynamic",
+			"targetType": "library",
+			"subConfigurations": {
+				"bindbc-icu": "dynamic"
+			}
+		},
+		{
+			"name": "dynamic-nolib",
+			"targetType": "library",
+			"subConfigurations": {
+				"bindbc-icu": "dynamic-nolib"
+			}
+		},
+		{
+			"name": "both",
+			"targetType": "library"
+		},
+		{
+			"name": "unittest-debug",
+			"targetType": "executable",
+			"dflags": ["-main", "-mixin=.dub/mixin.d"]
+		},
+		{
+			"name": "unittest",
+			"targetType": "library",
+			"dflags": ["-mixin=.dub/mixin.d"]
+		}
+	]
+}
