@@ -211,7 +211,7 @@ void generateDocument()
 	}
 	exec(["dub", "run", Defines.documentGenerator, "-y",
 		"--",
-		"-a=x86_64", "-b=release", "-c=default"], null, env);
+		"-a=x86_64", "-b=release", "-c=static"], null, env);
 }
 
 ///
@@ -221,7 +221,7 @@ void createReleaseBuild(string[] exDubOpts = null)
 		"build",
 		"-a",              config.hostArch,
 		"-b=unittest-cov",
-		"-c=default",
+		"-c=static",
 		"--compiler",      config.hostCompiler] ~ exDubOpts);
 }
 
