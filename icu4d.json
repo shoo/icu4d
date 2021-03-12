@@ -29,6 +29,7 @@
    {
     "name" : "__unittest_L7_C9",
     "kind" : "function",
+    "protection" : "public",
     "comment" : "\n",
     "line" : 7,
     "char" : 9,
@@ -75,6 +76,7 @@
    },
    {
     "kind" : "template",
+    "protection" : "public",
     "comment" : "\n",
     "line" : 29,
     "char" : 6,
@@ -119,6 +121,7 @@
    },
    {
     "kind" : "template",
+    "protection" : "public",
     "comment" : "ditto\n",
     "line" : 46,
     "char" : 6,
@@ -166,6 +169,7 @@
    {
     "name" : "decodeText",
     "kind" : "function",
+    "protection" : "public",
     "comment" : "ditto\n",
     "line" : 55,
     "char" : 8,
@@ -189,6 +193,7 @@
    },
    {
     "kind" : "template",
+    "protection" : "public",
     "comment" : "ditto\n",
     "line" : 62,
     "char" : 6,
@@ -232,6 +237,7 @@
    {
     "name" : "fromMBS",
     "kind" : "alias",
+    "protection" : "public",
     "comment" : "\n",
     "line" : 68,
     "char" : 1,
@@ -239,6 +245,7 @@
    },
    {
     "kind" : "template",
+    "protection" : "public",
     "comment" : "\n",
     "line" : 71,
     "char" : 6,
@@ -287,6 +294,7 @@
    },
    {
     "kind" : "template",
+    "protection" : "public",
     "comment" : "ditto\n",
     "line" : 88,
     "char" : 6,
@@ -330,6 +338,7 @@
    },
    {
     "kind" : "template",
+    "protection" : "public",
     "comment" : "ditto\n",
     "line" : 96,
     "char" : 20,
@@ -366,6 +375,7 @@
    },
    {
     "kind" : "template",
+    "protection" : "public",
     "comment" : "ditto\n",
     "line" : 104,
     "char" : 6,
@@ -409,6 +419,7 @@
    {
     "name" : "toMBS",
     "kind" : "alias",
+    "protection" : "public",
     "comment" : "\n",
     "line" : 110,
     "char" : 1,
@@ -487,6 +498,7 @@
      {
       "name" : "errorCode",
       "kind" : "variable",
+      "protection" : "public",
       "line" : 28,
       "char" : 13,
       "deco" : "E6bindbc3icu8bindings6utypes10UErrorCode",
@@ -495,6 +507,7 @@
      {
       "name" : "this",
       "kind" : "constructor",
+      "protection" : "public",
       "line" : 29,
       "char" : 2,
       "deco" : "FE6bindbc3icu8bindings6utypes10UErrorCodeZC5icu4d4misc22Icu4dEncodingException",
@@ -511,6 +524,7 @@
      {
       "name" : "this",
       "kind" : "constructor",
+      "protection" : "public",
       "line" : 35,
       "char" : 2,
       "deco" : "FE6bindbc3icu8bindings6utypes10UErrorCodeAyaZC5icu4d4misc22Icu4dEncodingException",
@@ -612,6 +626,7 @@
    {
     "name" : "ICUEncodingScheme",
     "kind" : "class",
+    "protection" : "public",
     "comment" : "\n",
     "line" : 18,
     "char" : 10,
@@ -647,6 +662,7 @@
      {
       "name" : "this",
       "kind" : "constructor",
+      "protection" : "public",
       "comment" : "\n",
       "line" : 26,
       "char" : 2,
@@ -664,6 +680,7 @@
      {
       "name" : "~this",
       "kind" : "destructor",
+      "protection" : "public",
       "comment" : "\n",
       "line" : 44,
       "char" : 2,
@@ -674,6 +691,7 @@
      {
       "name" : "toString",
       "kind" : "function",
+      "protection" : "public",
       "comment" : "\n",
       "line" : 55,
       "char" : 18,
@@ -690,6 +708,7 @@
      {
       "name" : "names",
       "kind" : "function",
+      "protection" : "public",
       "comment" : "\n",
       "line" : 61,
       "char" : 20,
@@ -706,6 +725,7 @@
      {
       "name" : "canEncode",
       "kind" : "function",
+      "protection" : "public",
       "comment" : "\n",
       "line" : 78,
       "char" : 16,
@@ -728,6 +748,7 @@
      {
       "name" : "encodedLength",
       "kind" : "function",
+      "protection" : "public",
       "comment" : "\n",
       "line" : 96,
       "char" : 18,
@@ -751,6 +772,7 @@
      {
       "name" : "encode",
       "kind" : "function",
+      "protection" : "public",
       "comment" : "\n",
       "line" : 103,
       "char" : 18,
@@ -778,6 +800,7 @@
      {
       "name" : "decode",
       "kind" : "function",
+      "protection" : "public",
       "comment" : "\n",
       "line" : 121,
       "char" : 17,
@@ -803,6 +826,7 @@
      {
       "name" : "safeDecode",
       "kind" : "function",
+      "protection" : "public",
       "comment" : "\n",
       "line" : 140,
       "char" : 17,
@@ -828,6 +852,7 @@
      {
       "name" : "replacementSequence",
       "kind" : "function",
+      "protection" : "public",
       "comment" : "\n",
       "line" : 160,
       "char" : 30,
@@ -843,6 +868,7 @@
      },
      {
       "kind" : "template",
+      "protection" : "public",
       "comment" : "\n",
       "line" : 167,
       "char" : 7,
@@ -881,6 +907,7 @@
      },
      {
       "kind" : "template",
+      "protection" : "public",
       "comment" : "ditto\n",
       "line" : 211,
       "char" : 7,
@@ -923,6 +950,7 @@
      {
       "name" : "decodeSequence",
       "kind" : "function",
+      "protection" : "public",
       "comment" : "ditto\n",
       "line" : 219,
       "char" : 9,
@@ -941,6 +969,7 @@
      },
      {
       "kind" : "template",
+      "protection" : "public",
       "comment" : "\n",
       "line" : 228,
       "char" : 7,
@@ -980,6 +1009,7 @@
      },
      {
       "kind" : "template",
+      "protection" : "public",
       "comment" : "ditto\n",
       "line" : 260,
       "char" : 7,
@@ -1018,6 +1048,7 @@
      },
      {
       "kind" : "template",
+      "protection" : "public",
       "comment" : "ditto\n",
       "line" : 268,
       "char" : 21,
@@ -1049,12 +1080,14 @@
      },
      {
       "name" : "__xdtor",
-      "kind" : "alias"
+      "kind" : "alias",
+      "protection" : "public"
      }
     ]
    },
    {
     "kind" : "template",
+    "protection" : "public",
     "comment" : "\n",
     "line" : 279,
     "char" : 7,
@@ -1070,12 +1103,13 @@
      {
       "name" : "ICUEncodingSchemeImpl",
       "kind" : "class",
+      "protection" : "public",
       "line" : 279,
       "char" : 7,
       "members" : [
        {
         "name" : "_sharedStaticCtor_L281_C2",
-        "kind" : "function",
+        "kind" : "shared static constructor",
         "line" : 281,
         "char" : 2,
         "storageClass" : [
@@ -1100,6 +1134,7 @@
    },
    {
     "kind" : "template",
+    "protection" : "public",
     "comment" : "\n",
     "line" : 293,
     "char" : 7,
@@ -1113,7 +1148,7 @@
     "members" : [
      {
       "name" : "_sharedStaticCtor_L295_C2",
-      "kind" : "function",
+      "kind" : "shared static constructor",
       "line" : 295,
       "char" : 2,
       "storageClass" : [
