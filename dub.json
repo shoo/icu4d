@@ -5,7 +5,7 @@
 	"license": "BSL-1.0",
 	"name": "icu4d",
 	"dependencies": {
-		"bindbc-icu": "~>67.1.0"
+		"bindbc-icu": "~>68.2.0"
 	},
 	
 	"configurations": [
