@@ -5,7 +5,7 @@
 [![downloads](https://img.shields.io/dub/dt/icu4d.svg?cacheSeconds=3600)](https://code.dlang.org/packages/icu4d)
 [![BSL-1.0](http://img.shields.io/badge/license-BSL--1.0-blue.svg?style=flat)](./LICENSE)
 [![codecov](https://codecov.io/gh/shoo/icu4d/branch/master/graph/badge.svg)](https://codecov.io/gh/shoo/icu4d)
-[![ICU-Version](http://img.shields.io/badge/icu%20version-69.1-green.svg?style=flat)](https://github.com/unicode-org/icu/releases/tag/release-69-1)
+[![ICU-Version](http://img.shields.io/badge/icu%20version-70.1-green.svg?style=flat)](https://github.com/unicode-org/icu/releases/tag/release-70-1)
 
 This project provides EncodingScheme of std.encoding based on ICU(International Components for Unicode).
 
@@ -15,7 +15,7 @@ If you are using dub, you can add a dependency by describing it as follows:
 
 ```json
 "dependencies": {
-    "icu4d": "~>69.1",
+    "icu4d": "~>70.1",
 }
 ```
 
@@ -23,13 +23,14 @@ On Windows, the package includes binaries, so you can use it as is.
 On Linux or MacOS, the ICU must be installed. Be sure to specify the version of the ICU.
 
 ```sh
-apt install libicu-dev=69.1-3
+apt install libicu-dev=70.1-2
 ```
 
 If the required version is not provided by the package manager, you will need to build it from source code.
 
 ```sh
-git clone -b release-69-1 --depth 1 --single-branch https://github.com/unicode-org/icu.git
+apt install -y git build-essential libicu-le-hb0 libicu-le-hb-dev
+git clone -b release-70-1 --depth 1 --single-branch https://github.com/unicode-org/icu.git
 cd icu/icu4c/source
 ./runConfigureICU Linux --disable-samples --disable-tests --with-data-packaging=library
 make -j2
@@ -41,7 +42,7 @@ For dynamic linking, use subconfigurations in addition to dependencies.
 
 ```json
 "dependencies": {
-    "icu4d": "~>69.1",
+    "icu4d": "~>70.1",
 }
 "subConfigurations": {
     "icu4d": "dynamic"
@@ -69,7 +70,7 @@ For static linking, use subconfigurations in addition to dependencies.
 
 ```json
 "dependencies": {
-    "icu4d": "~>69.1",
+    "icu4d": "~>70.1",
 }
 "subConfigurations": {
     "icu4d": "static"
