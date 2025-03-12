@@ -502,7 +502,7 @@
       "line" : 28,
       "char" : 13,
       "deco" : "E6bindbc3icu8bindings6utypes10UErrorCode",
-      "offset" : 76
+      "offset" : 84
      },
      {
       "name" : "this",
@@ -684,7 +684,10 @@
       "comment" : "\n",
       "line" : 44,
       "char" : 2,
-      "deco" : "FZv",
+      "storageClass" : [
+       "scope"
+      ],
+      "deco" : "FNlZv",
       "endline" : 52,
       "endchar" : 2
      },
