@@ -1082,7 +1082,7 @@
       ]
      },
      {
-      "name" : "__xdtor",
+      "name" : "~this",
       "kind" : "alias",
       "protection" : "public"
      }
